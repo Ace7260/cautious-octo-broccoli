@@ -89,8 +89,7 @@ export async function getProductBySlug(slug: string) {
     .select(`
       *,
       category:categories(id, name, slug),
-      product_images(id, image, order_index, is_primary),
-      reviews(id, rating, title, comment, created_at, user_id, profiles(username))
+      product_images(id, image, order_index, is_primary)
     `)
     .eq('slug', slug)
     .eq('is_active', true)
@@ -98,10 +97,20 @@ export async function getProductBySlug(slug: string) {
 
   if (error) throw error
 
+  // Charger les reviews séparément pour éviter les jointures trop profondes
+  let reviews = []
+  try {
+    const reviewsData = await getProductReviews(data.id)
+    reviews = reviewsData
+  } catch (err) {
+    console.error('Error loading reviews:', err)
+  }
+
   return {
     ...data,
     category_name: data.category?.name,
     images: data.product_images || [],
+    reviews: reviews,
     discount_percentage: data.compare_price 
       ? Math.round(((data.compare_price - data.price) / data.compare_price) * 100)
       : 0,
@@ -283,7 +292,7 @@ export async function getProductReviews(productId: string) {
     .from('reviews')
     .select(`
       *,
-      profile:profiles(username, avatar)
+      profile:profiles!user_id(username, avatar)
     `)
     .eq('product_id', productId)
     .order('created_at', { ascending: false })
