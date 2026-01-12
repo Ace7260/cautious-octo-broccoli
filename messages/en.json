@@ -1,0 +1,219 @@
+{
+  "common": {
+    "zolner": "ZOLNER",
+    "search": "Search...",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "add": "Add",
+    "remove": "Remove",
+    "update": "Update"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "account": "My Account",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Sign Up"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "subtitle": "Enter your credentials to access your account",
+      "username": "Username or Email",
+      "usernamePlaceholder": "your_username",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Sign In",
+      "submitting": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "error": "Invalid credentials"
+    },
+    "register": {
+      "title": "Sign Up",
+      "subtitle": "Create your account to get started",
+      "username": "Username",
+      "usernamePlaceholder": "johndoe",
+      "email": "Email",
+      "emailPlaceholder": "example@email.com",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "confirmPassword": "Confirm Password",
+      "submit": "Sign Up",
+      "submitting": "Signing up...",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooShort": "Password must be at least 6 characters"
+    },
+    "profile": {
+      "myProfile": "My Profile",
+      "myOrders": "My Orders",
+      "myWishlist": "My Wishlist"
+    }
+  },
+  "products": {
+    "viewProduct": "View Product",
+    "addToWishlist": "Add to Wishlist",
+    "inWishlist": "In Wishlist",
+    "addToCart": "Add to Cart",
+    "inCart": "In Cart",
+    "outOfStock": "Out of Stock",
+    "lowStock": "Only {count} left in stock",
+    "category": "Category",
+    "brand": "Brand",
+    "price": "Price",
+    "quantity": "Quantity",
+    "description": "Description",
+    "reviews": "Reviews",
+    "shipping": "Shipping",
+    "features": "Features",
+    "specifications": "Specifications",
+    "sales": "{count} sales",
+    "rating": "Rating",
+    "noReviews": "No reviews",
+    "featured": "Featured",
+    "new": "New",
+    "discount": "-{percent}%",
+    "orderViaWhatsApp": "Order via WhatsApp",
+    "unavailable": "Product Unavailable",
+    "sku": "SKU",
+    "weight": "Weight",
+    "inStock": "In Stock",
+    "available": "{count} available",
+    "restock": "Restocking soon"
+  },
+  "wishlist": {
+    "title": "My Wishlist",
+    "empty": "Your wishlist is empty",
+    "emptyDescription": "Add products to your wishlist to find them easily",
+    "discoverProducts": "Discover our products",
+    "itemCount": "{count} product",
+    "itemCount_plural": "{count} products",
+    "remove": "Remove"
+  },
+  "cart": {
+    "title": "My Cart",
+    "empty": "Your cart is empty",
+    "emptyDescription": "Add products to start shopping",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "shippingFree": "Free",
+    "total": "Total",
+    "checkout": "Checkout",
+    "continueShopping": "Continue Shopping",
+    "applyCoupon": "Apply Coupon Code",
+    "couponPlaceholder": "Coupon code",
+    "apply": "Apply",
+    "discount": "Discount",
+    "freeShippingFrom": "Free shipping from €50"
+  },
+  "home": {
+    "hero": {
+      "title": "Discover our collection",
+      "subtitle": "Best products at the best prices",
+      "cta": "Discover"
+    },
+    "featured": "Featured Products",
+    "categories": "Browse by Category",
+    "newArrivals": "New Arrivals",
+    "bestSellers": "Best Sellers",
+    "partners": "Our Partners",
+    "testimonials": "Customer Testimonials",
+    "newsletter": {
+      "title": "Stay Informed",
+      "subtitle": "Subscribe to our newsletter",
+      "emailPlaceholder": "Your email",
+      "subscribe": "Subscribe",
+      "subscribing": "Subscribing...",
+      "success": "Successfully subscribed!",
+      "benefits": {
+        "exclusive": "Exclusive offers",
+        "newProducts": "New products preview",
+        "tips": "Tips and tricks"
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "ourStory": "Our Story",
+    "ourValues": "Our Values",
+    "ourTeam": "Our Team",
+    "ourCommitment": "Our Commitment"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "How can we help?",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours"
+    }
+  },
+  "footer": {
+    "description": "Your trusted online store",
+    "quickLinks": "Quick Links",
+    "help": "Help",
+    "legal": "Legal",
+    "followUs": "Follow Us",
+    "copyright": "© {year} ZOLNER. All rights reserved.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "faq": "FAQ",
+    "returnPolicy": "Return Policy"
+  },
+  "shipping": {
+    "fastDelivery": "Fast Delivery",
+    "freeReturns": "Free Returns",
+    "securePayment": "Secure Payment",
+    "inStock": "In Stock",
+    "deliveryTime": "Delivery Time",
+    "standard": "Standard delivery: 2-5 business days",
+    "express": "Express delivery: 24-48h",
+    "shippingCost": "Shipping Cost",
+    "freeFrom": "Free from €50 purchase",
+    "otherwise": "Otherwise €4.90 in mainland France",
+    "returns": "Returns",
+    "returnPolicy": "Free returns within 30 days",
+    "returnCondition": "Product in original packaging"
+  },
+  "imageZoom": {
+    "hoverToExplore": "Move mouse to explore • Click to enlarge",
+    "imageCount": "{current} / {total}"
+  },
+  "errors": {
+    "generic": "An error occurred",
+    "network": "Connection error",
+    "notFound": "Page not found",
+    "unauthorized": "Unauthorized",
+    "serverError": "Server error"
+  }
+}

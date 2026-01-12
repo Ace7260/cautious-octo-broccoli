@@ -1,0 +1,219 @@
+{
+  "common": {
+    "zolner": "ZOLNER",
+    "search": "Rechercher...",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "close": "Fermer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "add": "Ajouter",
+    "remove": "Retirer",
+    "update": "Mettre à jour"
+  },
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À propos",
+    "contact": "Contact",
+    "cart": "Panier",
+    "wishlist": "Wishlist",
+    "account": "Mon compte",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "register": "S'inscrire"
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "subtitle": "Entrez vos identifiants pour accéder à votre compte",
+      "username": "Nom d'utilisateur ou Email",
+      "usernamePlaceholder": "votre_nom_utilisateur",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Se connecter",
+      "submitting": "Connexion...",
+      "noAccount": "Pas encore de compte ?",
+      "signUp": "S'inscrire",
+      "error": "Identifiants incorrects"
+    },
+    "register": {
+      "title": "Inscription",
+      "subtitle": "Créez votre compte pour commencer",
+      "username": "Nom d'utilisateur",
+      "usernamePlaceholder": "johndoe",
+      "email": "Email",
+      "emailPlaceholder": "exemple@email.com",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "••••••••",
+      "confirmPassword": "Confirmer le mot de passe",
+      "submit": "S'inscrire",
+      "submitting": "Inscription...",
+      "hasAccount": "Déjà un compte ?",
+      "signIn": "Se connecter",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères"
+    },
+    "profile": {
+      "myProfile": "Mon profil",
+      "myOrders": "Mes commandes",
+      "myWishlist": "Ma wishlist"
+    }
+  },
+  "products": {
+    "viewProduct": "Voir le produit",
+    "addToWishlist": "Ajouter à la wishlist",
+    "inWishlist": "Dans la wishlist",
+    "addToCart": "Ajouter au panier",
+    "inCart": "Dans le panier",
+    "outOfStock": "Rupture de stock",
+    "lowStock": "Plus que {count} en stock",
+    "category": "Catégorie",
+    "brand": "Marque",
+    "price": "Prix",
+    "quantity": "Quantité",
+    "description": "Description",
+    "reviews": "Avis",
+    "shipping": "Livraison",
+    "features": "Caractéristiques",
+    "specifications": "Spécifications",
+    "sales": "{count} ventes",
+    "rating": "Note",
+    "noReviews": "Aucun avis",
+    "featured": "Vedette",
+    "new": "Nouveau",
+    "discount": "-{percent}%",
+    "orderViaWhatsApp": "Commander via WhatsApp",
+    "unavailable": "Produit indisponible",
+    "sku": "SKU",
+    "weight": "Poids",
+    "inStock": "En stock",
+    "available": "{count} disponibles",
+    "restock": "Réappro. en cours"
+  },
+  "wishlist": {
+    "title": "Ma Wishlist",
+    "empty": "Votre wishlist est vide",
+    "emptyDescription": "Ajoutez des produits à votre wishlist pour les retrouver facilement",
+    "discoverProducts": "Découvrir nos produits",
+    "itemCount": "{count} produit",
+    "itemCount_plural": "{count} produits",
+    "remove": "Retirer"
+  },
+  "cart": {
+    "title": "Mon Panier",
+    "empty": "Votre panier est vide",
+    "emptyDescription": "Ajoutez des produits pour commencer vos achats",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "shippingFree": "Gratuite",
+    "total": "Total",
+    "checkout": "Passer la commande",
+    "continueShopping": "Continuer mes achats",
+    "applyCoupon": "Appliquer un code promo",
+    "couponPlaceholder": "Code promo",
+    "apply": "Appliquer",
+    "discount": "Réduction",
+    "freeShippingFrom": "Livraison gratuite dès 50€"
+  },
+  "home": {
+    "hero": {
+      "title": "Découvrez notre collection",
+      "subtitle": "Les meilleurs produits aux meilleurs prix",
+      "cta": "Découvrir"
+    },
+    "featured": "Produits vedettes",
+    "categories": "Parcourir par catégorie",
+    "newArrivals": "Nouveautés",
+    "bestSellers": "Meilleures ventes",
+    "partners": "Nos partenaires",
+    "testimonials": "Témoignages clients",
+    "newsletter": {
+      "title": "Restez informé",
+      "subtitle": "Inscrivez-vous à notre newsletter",
+      "emailPlaceholder": "Votre email",
+      "subscribe": "S'inscrire",
+      "subscribing": "Inscription...",
+      "success": "Inscription réussie !",
+      "benefits": {
+        "exclusive": "Offres exclusives",
+        "newProducts": "Nouveaux produits en avant-première",
+        "tips": "Conseils et astuces"
+      }
+    }
+  },
+  "about": {
+    "title": "À propos de nous",
+    "ourStory": "Notre histoire",
+    "ourValues": "Nos valeurs",
+    "ourTeam": "Notre équipe",
+    "ourCommitment": "Notre engagement"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes là pour vous aider",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "email": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "subject": "Sujet",
+    "subjectPlaceholder": "Comment pouvons-nous vous aider ?",
+    "message": "Message",
+    "messagePlaceholder": "Votre message...",
+    "send": "Envoyer",
+    "sending": "Envoi...",
+    "success": "Message envoyé avec succès !",
+    "info": {
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "Email",
+      "hours": "Horaires"
+    }
+  },
+  "footer": {
+    "description": "Votre boutique en ligne de confiance",
+    "quickLinks": "Liens rapides",
+    "help": "Aide",
+    "legal": "Légal",
+    "followUs": "Suivez-nous",
+    "copyright": "© {year} ZOLNER. Tous droits réservés.",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "faq": "FAQ",
+    "returnPolicy": "Politique de retour"
+  },
+  "shipping": {
+    "fastDelivery": "Livraison rapide",
+    "freeReturns": "Retours gratuits",
+    "securePayment": "Paiement sécurisé",
+    "inStock": "En stock",
+    "deliveryTime": "Délais de livraison",
+    "standard": "Livraison standard : 2-5 jours ouvrés",
+    "express": "Livraison express : 24-48h",
+    "shippingCost": "Frais de port",
+    "freeFrom": "Gratuit dès 50€ d'achat",
+    "otherwise": "Sinon 4,90€ en France métropolitaine",
+    "returns": "Retours",
+    "returnPolicy": "Retours gratuits sous 30 jours",
+    "returnCondition": "Produit dans son emballage d'origine"
+  },
+  "imageZoom": {
+    "hoverToExplore": "Bougez la souris pour explorer • Cliquez pour agrandir",
+    "imageCount": "{current} / {total}"
+  },
+  "errors": {
+    "generic": "Une erreur est survenue",
+    "network": "Erreur de connexion",
+    "notFound": "Page non trouvée",
+    "unauthorized": "Non autorisé",
+    "serverError": "Erreur serveur"
+  }
+}
