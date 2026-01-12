@@ -2,6 +2,17 @@
 const nextConfig = {
   images: {
     remotePatterns: [
+      // GitHub Pages
+      {
+        protocol: 'https',
+        hostname: 'ace7260.github.io',
+      },
+      // Supabase Storage
+      {
+        protocol: 'https',
+        hostname: '*.supabase.co',
+      },
+      // Django local (si vous revenez à Django)
       {
         protocol: 'http',
         hostname: '127.0.0.1',
@@ -29,11 +40,9 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-}
+};
 
 // Intégration avec next-intl
-const withNextIntl = require('next-intl/plugin')(
-  './src/i18n/request.ts'
-);
+const withNextIntl = require("next-intl/plugin")("./src/i18n/request.ts");
 
 module.exports = withNextIntl(nextConfig);
