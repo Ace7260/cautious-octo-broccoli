@@ -68,6 +68,14 @@ export function ImageZoom({ images, productName, initialIndex = 0 }: ImageZoomPr
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [open, handleNext, handlePrevious])
 
+  // Cleanup: fermer le dialog lors du démontage du composant
+  useEffect(() => {
+    return () => {
+      setOpen(false)
+      setIsZoomed(false)
+    }
+  }, [])
+
   // Comme Amazon : clic sur miniature change l'image principale SANS ouvrir le zoom
   const handleThumbnailClick = (index: number) => {
     setSelectedThumbnail(index)

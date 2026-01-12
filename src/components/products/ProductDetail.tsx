@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
+import { Link } from '@/navigation'
 import { SafeImage } from '@/components/ui/safe-image'
 import { getProduct, Product } from '@/lib/api'
 import { Button } from '@/components/ui/button'

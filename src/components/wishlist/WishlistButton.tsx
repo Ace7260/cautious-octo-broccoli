@@ -41,8 +41,14 @@ export function WishlistButton({
   }, [productId])
 
   useEffect(() => {
-    if (isAuthenticated) {
+    let isMounted = true
+
+    if (isAuthenticated && isMounted) {
       checkWishlistStatus()
+    }
+
+    return () => {
+      isMounted = false
     }
   }, [isAuthenticated, checkWishlistStatus])
 

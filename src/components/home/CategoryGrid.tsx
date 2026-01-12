@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
+import { Link } from '@/navigation'
 import { getCategories, Category } from '@/lib/api'
 import { SafeImage } from '@/components/ui/safe-image'
 import { Card } from '@/components/ui/card'
