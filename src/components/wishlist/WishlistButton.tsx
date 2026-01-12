@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -29,22 +29,22 @@ export function WishlistButton({
   const [loading, setLoading] = useState(false)
   const [wishlistId, setWishlistId] = useState<number | null>(null)
 
+  const checkWishlistStatus = useCallback(async () => {
+    try {
+      const wishlist = await getDefaultWishlist()
+      setWishlistId(Number(wishlist.id))
+      const items = wishlist.items || []
+      setIsInWishlist(items.some((item) => Number(item.product.id) === productId))
+    } catch (error) {
+      console.error('Erreur lors de la vérification de la wishlist:', error)
+    }
+  }, [productId])
+
   useEffect(() => {
     if (isAuthenticated) {
       checkWishlistStatus()
     }
-  }, [isAuthenticated, productId])
-
-  const checkWishlistStatus = async () => {
-    try {
-      const wishlist = await getDefaultWishlist()
-      setWishlistId(wishlist.id)
-      const items = wishlist.items || []
-      setIsInWishlist(items.some((item) => item.product.id === productId))
-    } catch (error) {
-      console.error('Erreur lors de la vérification de la wishlist:', error)
-    }
-  }
+  }, [isAuthenticated, checkWishlistStatus])
 
   const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault()
@@ -62,7 +62,7 @@ export function WishlistButton({
       let currentWishlistId = wishlistId
       if (!currentWishlistId) {
         const wishlist = await getDefaultWishlist()
-        currentWishlistId = wishlist.id
+        currentWishlistId = Number(wishlist.id)
         setWishlistId(currentWishlistId)
       }
       

@@ -26,7 +26,7 @@ export function CallToAction() {
             
             <p className="text-lg opacity-90 leading-relaxed">
               Profitez de -20% sur tous nos produits vedettes. Livraison gratuite 
-              pour toute commande supérieure à 50€. Offre valable jusqu'à la fin du mois !
+              pour toute commande supérieure à 50€. Offre valable jusqu&apos;à la fin du mois !
             </p>
             
             <ul className="space-y-3">

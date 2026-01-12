@@ -101,7 +101,14 @@ export const getProducts = async (params?: {
   offset?: number
 }): Promise<Product[]> => {
   if (USE_SUPABASE) {
-    const data = await SupabaseAPI.getProducts(params)
+    const supabaseParams = {
+      ...(params?.category !== undefined && { category: String(params.category) }),
+      ...(params?.is_featured !== undefined && { featured: params.is_featured }),
+      ...(params?.search && { search: params.search }),
+      ...(params?.limit && { limit: params.limit }),
+      ...(params?.offset && { offset: params.offset }),
+    }
+    const data = await SupabaseAPI.getProducts(supabaseParams)
     return data.map((product: any) => ({
       ...product,
       price: product.price.toString(),

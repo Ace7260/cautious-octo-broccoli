@@ -31,9 +31,9 @@ export function ProductVariantSelector({
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null)
 
   // Grouper les variantes par type
-  const colors = [...new Set(variants.filter(v => v.color).map(v => v.color))]
-  const sizes = [...new Set(variants.filter(v => v.size).map(v => v.size))]
-  const materials = [...new Set(variants.filter(v => v.material).map(v => v.material))]
+  const colors = Array.from(new Set(variants.filter(v => v.color).map(v => v.color))).filter((color): color is string => color !== undefined)
+  const sizes = Array.from(new Set(variants.filter(v => v.size).map(v => v.size))).filter((size): size is string => size !== undefined)
+  const materials = Array.from(new Set(variants.filter(v => v.material).map(v => v.material))).filter((material): material is string => material !== undefined)
 
   const [selectedColor, setSelectedColor] = useState<string | null>(null)
   const [selectedSize, setSelectedSize] = useState<string | null>(null)

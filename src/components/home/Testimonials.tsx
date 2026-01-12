@@ -94,7 +94,7 @@ export function Testimonials() {
 
                 {/* Comment */}
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  "{testimonial.comment}"
+                  &quot;{testimonial.comment}&quot;
                 </p>
 
                 {/* Author */}

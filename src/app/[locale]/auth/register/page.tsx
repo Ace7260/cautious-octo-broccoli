@@ -40,7 +40,7 @@ export default function RegisterPage() {
     setLoading(true)
 
     try {
-      await register(username, email, password, confirmPassword)
+      await register(username, email, password)
       router.push('/')
     } catch (err: any) {
       setError(err.message)

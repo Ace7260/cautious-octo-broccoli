@@ -21,8 +21,8 @@ export function ProductsByCategory() {
         // Vérifier que data est un tableau
         if (Array.isArray(data)) {
           setCategoryProducts(data)
-        } else if (data && typeof data === 'object' && Array.isArray(data.results)) {
-          setCategoryProducts(data.results)
+        } else if (data && typeof data === 'object' && 'results' in data && Array.isArray((data as any).results)) {
+          setCategoryProducts((data as any as { results: CategoryProducts[] }).results)
         } else {
           console.warn('Format de données inattendu:', data)
           setCategoryProducts([])

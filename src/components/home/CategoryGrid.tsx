@@ -17,9 +17,9 @@ export function CategoryGrid() {
         // Vérifier que data est un tableau
         if (Array.isArray(data)) {
           setCategories(data)
-        } else if (data && typeof data === 'object' && Array.isArray(data.results)) {
+        } else if (data && typeof data === 'object' && 'results' in data && Array.isArray((data as any).results)) {
           // Si l'API retourne {results: [...]}
-          setCategories(data.results)
+          setCategories((data as any).results)
         } else {
           console.warn('Format de données inattendu:', data)
           setCategories([])

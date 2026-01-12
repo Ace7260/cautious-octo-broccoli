@@ -70,7 +70,7 @@ export function Newsletter() {
                 ) : (
                   <>
                     <Send className="mr-2 h-4 w-4" />
-                    S'inscrire
+                    S&apos;inscrire
                   </>
                 )}
               </Button>

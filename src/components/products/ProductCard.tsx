@@ -48,7 +48,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Bouton Wishlist */}
           <div className="absolute top-2 left-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
             <WishlistButton 
-              productId={product.id} 
+              productId={Number(product.id)} 
               variant="ghost" 
               size="icon" 
               showText={false}
@@ -73,7 +73,7 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Rating */}
         {reviewCount > 0 && (
           <div className="mb-2">
-            <ProductRating rating={averageRating} reviewCount={reviewCount} size="sm" />
+            <ProductRating rating={averageRating || 0} reviewCount={reviewCount} size="sm" />
           </div>
         )}
         
@@ -97,7 +97,7 @@ export function ProductCard({ product }: ProductCardProps) {
         )}
         {isLowStock && product.in_stock && (
           <p className="text-sm text-orange-600 font-medium mt-1">
-            {t('lowStock', { count: product.stock_quantity })}
+            {t('lowStock', { count: product.stock_quantity || 0 })}
           </p>
         )}
       </CardContent>
@@ -109,7 +109,7 @@ export function ProductCard({ product }: ProductCardProps) {
           </button>
         </Link>
         <WishlistButton 
-          productId={product.id} 
+          productId={product.id ? Number(product.id) : 0} 
           variant="outline" 
           size="default"
           showText={false}

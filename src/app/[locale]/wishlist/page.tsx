@@ -49,8 +49,16 @@ export default function WishlistPage() {
   const loadWishlist = async () => {
     try {
       const wishlist = await getDefaultWishlist()
-      setWishlistId(wishlist.id)
-      setWishlistItems(wishlist.items || [])
+      setWishlistId(Number(wishlist.id))
+      const items = (wishlist.items || []).map((item: any) => ({
+        ...item,
+        id: Number(item.id),
+        product: {
+          ...item.product,
+          id: Number(item.product.id)
+        }
+      }))
+      setWishlistItems(items)
     } catch (error) {
       console.error('Erreur lors du chargement de la wishlist:', error)
     } finally {

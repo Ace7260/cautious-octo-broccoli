@@ -15,8 +15,8 @@ export function FeaturedProducts() {
         // Vérifier que data est un tableau
         if (Array.isArray(data)) {
           setProducts(data)
-        } else if (data && typeof data === 'object' && Array.isArray(data.results)) {
-          setProducts(data.results)
+        } else if (data && typeof data === 'object' && 'results' in data && Array.isArray((data as any).results)) {
+          setProducts((data as any).results)
         } else {
           console.warn('Format de données inattendu:', data)
           setProducts([])

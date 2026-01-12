@@ -11,7 +11,7 @@ export default function AboutPage() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4">Notre Histoire</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            ZOLNER est né de la passion pour l'excellence et l'innovation. Depuis nos débuts, nous nous engageons à offrir à nos clients les meilleurs produits avec un service exceptionnel.
+            ZOLNER est né de la passion pour l&apos;excellence et l&apos;innovation. Depuis nos débuts, nous nous engageons à offrir à nos clients les meilleurs produits avec un service exceptionnel.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Notre mission est simple : rendre le shopping en ligne accessible, agréable et sécurisé pour tous.

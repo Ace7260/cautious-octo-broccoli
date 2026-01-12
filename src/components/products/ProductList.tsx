@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { ProductCard } from './ProductCard'
 import { getProducts, getCategories, Product, Category } from '@/lib/api'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Input } from '@/components/ui/input'
 import { Search } from 'lucide-react'
 
@@ -25,8 +25,8 @@ export function ProductList() {
         // Vérifier et extraire les produits
         if (Array.isArray(productsData)) {
           setProducts(productsData)
-        } else if (productsData && typeof productsData === 'object' && Array.isArray(productsData.results)) {
-          setProducts(productsData.results)
+        } else if (productsData && typeof productsData === 'object' && 'results' in productsData && Array.isArray((productsData as any).results)) {
+          setProducts((productsData as any).results)
         } else {
           console.warn('Format de produits inattendu:', productsData)
           setProducts([])
@@ -35,14 +35,14 @@ export function ProductList() {
         // Vérifier et extraire les catégories
         if (Array.isArray(categoriesData)) {
           setCategories(categoriesData)
-        } else if (categoriesData && typeof categoriesData === 'object' && Array.isArray(categoriesData.results)) {
-          setCategories(categoriesData.results)
+        } else if (categoriesData && typeof categoriesData === 'object' && 'results' in categoriesData && Array.isArray((categoriesData as any).results)) {
+          setCategories((categoriesData as any).results)
         } else {
           console.warn('Format de catégories inattendu:', categoriesData)
           setCategories([])
         }
       } catch (error) {
-        console.error('Erreur lors du chargement des données:', error)
+  
         setProducts([])
         setCategories([])
       } finally {
@@ -66,14 +66,13 @@ export function ProductList() {
         // Vérifier et extraire les produits
         if (Array.isArray(data)) {
           setProducts(data)
-        } else if (data && typeof data === 'object' && Array.isArray(data.results)) {
-          setProducts(data.results)
+        } else if (data && typeof data === 'object' && 'results' in data && Array.isArray((data as any).results)) {
+          setProducts((data as any).results)
         } else {
           console.warn('Format de données inattendu:', data)
           setProducts([])
         }
       } catch (error) {
-        console.error('Erreur lors du chargement des produits:', error)
         setProducts([])
       } finally {
         setLoading(false)

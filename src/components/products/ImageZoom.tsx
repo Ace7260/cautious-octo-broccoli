@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { SafeImage } from '@/components/ui/safe-image'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
@@ -44,6 +44,16 @@ export function ImageZoom({ images, productName, initialIndex = 0 }: ImageZoomPr
     }
   }, [currentIndex, open, images])
 
+  const handlePrevious = useCallback(() => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
+    setIsZoomed(false)
+  }, [images.length])
+
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+    setIsZoomed(false)
+  }, [images.length])
+
   // Navigation au clavier
   useEffect(() => {
     if (!open) return
@@ -56,17 +66,7 @@ export function ImageZoom({ images, productName, initialIndex = 0 }: ImageZoomPr
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [open])
-
-  const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
-    setIsZoomed(false)
-  }
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
-    setIsZoomed(false)
-  }
+  }, [open, handleNext, handlePrevious])
 
   // Comme Amazon : clic sur miniature change l'image principale SANS ouvrir le zoom
   const handleThumbnailClick = (index: number) => {

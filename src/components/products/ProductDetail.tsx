@@ -86,8 +86,8 @@ export function ProductDetail({ slug }: ProductDetailProps) {
   const averageRating = product.average_rating || 0
   const reviewCount = product.review_count || 0
   const discountPercentage = product.discount_percentage || 0
-  const currentPrice = selectedVariant ? selectedVariant.final_price : parseFloat(product.price)
-  const hasVariants = product.variants && product.variants.length > 0
+  const currentPrice = selectedVariant ? selectedVariant.final_price : (typeof product.price === 'number' ? product.price : parseFloat(product.price))
+  const hasVariants = ('variants' in product) && product.variants && (product.variants as any[]).length > 0
 
   return (
     <div>
@@ -155,8 +155,8 @@ export function ProductDetail({ slug }: ProductDetailProps) {
           {/* Variantes */}
           {hasVariants && (
             <ProductVariantSelector
-              variants={product.variants}
-              basePrice={parseFloat(product.price)}
+              variants={((product as any).variants) as any[]}
+              basePrice={typeof product.price === 'number' ? product.price : parseFloat(product.price)}
               onVariantSelect={setSelectedVariant}
             />
           )}
@@ -201,7 +201,7 @@ export function ProductDetail({ slug }: ProductDetailProps) {
                   Commander via WhatsApp
                 </Button>
                 <WishlistButton 
-                  productId={product.id}
+                  productId={Number(product.id)}
                   size="lg"
                   variant="outline"
                   className="w-full"
@@ -245,7 +245,7 @@ export function ProductDetail({ slug }: ProductDetailProps) {
                     {product.in_stock ? 'En stock' : 'Rupture de stock'}
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    {product.stock_quantity > 0 ? `${product.stock_quantity} disponibles` : 'Réappro. en cours'}
+                    {(product.stock_quantity || 0) > 0 ? `${product.stock_quantity} disponibles` : 'Réappro. en cours'}
                   </p>
                 </div>
               </div>
@@ -253,10 +253,10 @@ export function ProductDetail({ slug }: ProductDetailProps) {
           </Card>
 
           {/* SKU et autres infos */}
-          {(product.sku || product.weight) && (
+          {(product.sku || (product as any).weight) && (
             <div className="text-xs text-muted-foreground space-y-1">
               {product.sku && <p>SKU: {product.sku}</p>}
-              {product.weight && <p>Poids: {product.weight} kg</p>}
+              {(product as any).weight && <p>Poids: {(product as any).weight} kg</p>}
             </div>
           )}
         </div>
@@ -282,7 +282,7 @@ export function ProductDetail({ slug }: ProductDetailProps) {
         
         <TabsContent value="reviews" className="mt-6">
           <ReviewSection 
-            reviews={product.reviews || []}
+            reviews={(product as any).reviews || []}
             averageRating={averageRating}
             reviewCount={reviewCount}
           />
@@ -301,7 +301,7 @@ export function ProductDetail({ slug }: ProductDetailProps) {
               <div>
                 <h3 className="font-semibold mb-2">Frais de port</h3>
                 <p className="text-sm text-muted-foreground">
-                  Gratuit dès 50€ d'achat<br />
+                  Gratuit dès 50€ d&apos;achat<br />
                   Sinon 4,90€ en France métropolitaine
                 </p>
               </div>
@@ -309,7 +309,7 @@ export function ProductDetail({ slug }: ProductDetailProps) {
                 <h3 className="font-semibold mb-2">Retours</h3>
                 <p className="text-sm text-muted-foreground">
                   Retours gratuits sous 30 jours<br />
-                  Produit dans son emballage d'origine
+                  Produit dans son emballage d&apos;origine
                 </p>
               </div>
             </div>

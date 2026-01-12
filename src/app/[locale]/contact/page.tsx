@@ -29,7 +29,7 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Contactez-nous</h1>
           <p className="text-muted-foreground">
-            Nous sommes là pour vous aider. N'hésitez pas à nous contacter !
+            Nous sommes là pour vous aider. N&apos;hésitez pas à nous contacter !
           </p>
         </div>
 
